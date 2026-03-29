@@ -12,7 +12,7 @@ def calculate_gap(text):
 def decision(score):
     return "BLOCK" if score >= 0.3 else "ALLOW"
 
-st.title("TRICODE Demo")
+st.title("TRICODE Demo v2")
 
 text = st.text_area("Input")
 
