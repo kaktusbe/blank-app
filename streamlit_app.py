@@ -23,9 +23,9 @@ if st.button("Run"):
     st.write(f"Gap Score: {gap}")
 
     if result == "BLOCK":
-        st.error("❌ BLOCKED" \
-        "High risk detected. Execution prevented." \
-        "Reason: Internal data / insufficient evidence")
-    else:
+        st.error("❌ BLOCK")
+        st.write("Reason:", "내부 데이터 사용 + 투자 판단 요청 감지")
+        
+    else:   
         st.success("✅ ALLOWED" \
         "Safe to proceed with AI response.")
