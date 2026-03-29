@@ -12,9 +12,9 @@ def calculate_gap(text):
 def decision(score):
     return "BLOCK" if score >= 0.3 else "ALLOW"
 
-st.title("TRICODE Demo v2")
+st.title("AI Output Risk Control Layer")
 
-text = st.text_area("Input")
+text = st.text_area("AI 실행 전 리스크를 판단할 요청을 입력하세요")
 
 if st.button("Run"):
     gap = calculate_gap(text)
@@ -23,6 +23,9 @@ if st.button("Run"):
     st.write(f"Gap Score: {gap}")
 
     if result == "BLOCK":
-        st.error("BLOCK")
+        st.error("❌ BLOCKED" \
+        "High risk detected. Execution prevented." \
+        "Reason: Internal data / insufficient evidence")
     else:
-        st.success("ALLOW")
+        st.success("✅ ALLOWED" \
+        "Safe to proceed with AI response.")
